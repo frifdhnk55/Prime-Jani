@@ -33,32 +33,32 @@ def stream_markup_timer(_, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)
     if 0 < umm <= 10:
-        bar = "𝗩—————————"
+        bar = "✄·─·─·─·─·─·─·─·─·─"
     elif 10 < umm < 20:
-        bar = "—𝗶————————"
+        bar = "-ˋˏ✄·─·─·─·─·─·─·─·─"
     elif 20 <= umm < 30:
-        bar = "——𝗣———————"
+        bar = "-ˋˏ-ˋˏ✄·─·─·─·─·─·─·─"
     elif 30 <= umm < 40:
-        bar = "———𝗝——————"
+        bar = "-ˋˏ-ˋˏ-ˋˏ✄·─·─·─·─·─·─"
     elif 40 <= umm < 50:
-        bar = "————𝗮—————"
+        bar = "-ˋˏ-ˋˏ-ˋˏ-ˋˏ✄·─·─·─·─·─"
     elif 50 <= umm < 60:
-        bar = "—————𝗻————"
+        bar = "-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ✄·─·─·─·─"
     elif 60 <= umm < 70:
-        bar = "——————𝗶———"
+        bar = "-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ✄·─·─·─"
     elif 70 <= umm < 80:
-        bar = "—𝗩𝗶𝗣 𝗝𝗮𝗻𝗶—"
+        bar = "-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ✄·─·─"
     elif 80 <= umm < 95:
-        bar = "—𝗝𝗮𝗻𝗶 𝗠𝘂𝘀𝗶𝗰—"
+        bar = "-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ✄·─"
     else:
-        bar = "———𝗩𝗶𝗣———"
+        bar = "-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ✄·"
     buttons = [
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="❚❚", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="⎗", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
+            InlineKeyboardButton(text="⎘", callback_data=f"ADMIN Stop|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
             InlineKeyboardButton(
